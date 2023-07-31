@@ -166,7 +166,7 @@ function Signin() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="https://main--dynamic-sundae-733fcb.netlify.app/login" variant="body2">
+                <Link href="/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
