@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import CssBaseline from '@mui/material/CssBaseline';
-
+import Header from "../components/Header";
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
@@ -89,6 +89,8 @@ function Signin() {
   });
 
   return (
+<>
+    <Header />
       <Container component="main" maxWidth="sm">
         <CssBaseline />
         <Box
@@ -104,7 +106,7 @@ function Signin() {
           }}
         >
           <Typography component="h1" variant="h5">
-            Sign up
+            Run!!
           </Typography>
           <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
@@ -152,12 +154,7 @@ function Signin() {
         helperText={passwordError}
                 />
               </Grid>
-              <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
-              </Grid>
+              
             </Grid>
             <Button
               type="submit"
@@ -169,7 +166,7 @@ function Signin() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href="http://localhost:3000/login" variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
@@ -178,7 +175,7 @@ function Signin() {
         </Box>
        
       </Container>
-       
+      </>
   );
 }
 
